@@ -21,7 +21,7 @@ USING isadmin::BOOLEAN;
 
 alter table users
 ALTER COLUMN isadmin SET DEFAULT FALSE;
-
+--PRIMARY KEY(id)
 
 create table tasks (
     id SERIAL PRIMARY KEY,
