@@ -26,8 +26,9 @@ ALTER COLUMN isadmin SET DEFAULT FALSE;
 create table tasks (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50),
-    user_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    user_id INT
+);
+ 
 );
 
 
