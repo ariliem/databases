@@ -1,27 +1,29 @@
-CREATE DATABASE lab1;
+--lab1
+
+create database lab1;
 
 
-CREATE TABLE users(
+create table users(
     id SERIAL,
     firstname varchar(50),
     lastname varchar(50),
     PRIMARY KEY(id)
 );
 
-ALTER TABLE users
-ADD COLUMN isadmin INT DEFAULT 0;
+alter table users
+add column isadmin INT DEFAULT 0;
 
 
-ALTER TABLE users
+alter table users
 ALTER COLUMN isadmin SET DATA TYPE BOOLEAN
 USING isadmin::BOOLEAN;
 
 
-ALTER TABLE users
+alter table users
 ALTER COLUMN isadmin SET DEFAULT FALSE;
 
 
-CREATE TABLE tasks (
+create table tasks (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50),
     user_id INT,
@@ -29,7 +31,7 @@ CREATE TABLE tasks (
 );
 
 
-DROP TABLE tasks;
+drop table tasks;
 
 
-DROP DATABASE IF EXISTS lab1;
+drop database IF EXISTS lab1;
