@@ -42,7 +42,7 @@ insert into countries(country_name, region_id, population)
 values(default, default, default);
 
 --10
-create table countries_new as table countries with no data;
+create table countries_new(like countries);
 
 --11
 insert into countries_new select * from countries;
